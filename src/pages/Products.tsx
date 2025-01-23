@@ -104,7 +104,7 @@ const Products: React.FC = () => {
                     <td>{product.stock}</td>
                 </tr>
                 {expandedRowId === product.id && (<tr>
-                    <td colSpan={4}>
+                    <td colSpan={10}>
                         <div style={{padding: '10px', backgroundColor: '#7f7f7f'}}>
                             <p><strong>Rating rate:</strong> {product.rating.rate}</p>
                             <p><strong>Rating count:</strong> {product.rating.count}</p>
@@ -205,9 +205,11 @@ const Products: React.FC = () => {
                             value={newProduct.id}
                             onChange={handleInputChange}/>
                     </div>
-                    <button type="submit">Add Product</button>
+
 
                 </form>
+                <br/>
+                <button type="submit">Add Product</button>
             </>
         )}
         <br/><br/><br/>

@@ -5,6 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -27,6 +28,10 @@ button {
     width: fit-content;
     align-content: center;
     align-self: center;
+}
+.product_cart{
+    display: flex;
+    flex-direction: column;
 }
 
 .add_entry {

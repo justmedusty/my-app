@@ -113,12 +113,13 @@ const Carts: React.FC = () => {
                 <tr onClick={() => toggleRow(cart.id)} style={{cursor: 'pointer'}}>
                     <td>{userLookup[cart.userId]?.firstname || 'Not Found'}</td>
                     <td>{userLookup[cart.userId]?.lastname || 'Not found'}</td>
-                    <td>{cart.items.length}</td>
-                    <td>{cart.date}</td>
-                    <td>{cart.status}</td>
+                    <td>{cart.items.length || 'Not found'}</td>
+                    <td>{cart.date || 'Not found'}</td>
+                    <td>{cart.status || 'Not found'}</td>
                 </tr>
-                {expandedRowId === cart.id.toString() && (<tr>
-                    <td colSpan={4}>
+                {expandedRowId === cart.id.toString() && (
+                    <tr>
+                    <td colSpan={10}>
                         <div style={{padding: '10px', backgroundColor: '#7f7f7f'}}>
                             <p><strong>User full
                                 name:</strong> {userLookup[cart.userId]?.firstname || 'None found'} {userLookup[cart.userId]?.lastname}
@@ -132,10 +133,10 @@ const Carts: React.FC = () => {
                             </p>
 
                             <h3>Products in Cart:</h3>
-                            {cart.items.map((item) => (<ul key={item.productId}>
-                                <li>Name: {productLookup[item.productId]?.name || 'Product Not Found'}</li>
-                                <li>Description: {productLookup[item.productId]?.description || 'Product Not Found'}</li>
-                                <li>Quantity : {item.quantity || 'Product Not Found'}</li>
+                            {cart.items.map((item) => (<ul className={"product_cart"} key={item.productId}>
+                                <li className={"product_cart"}>Name: {productLookup[item.productId]?.name || 'Product Not Found'}</li>
+                                <li className={"product_cart"}>Description: {productLookup[item.productId]?.description || 'Product Not Found'}</li>
+                                <li className={"product_cart"}>Quantity : {item.quantity || 'Product Not Found'}</li>
                             </ul>))}
 
                         </div>
