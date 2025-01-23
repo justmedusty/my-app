@@ -206,13 +206,13 @@ const Products: React.FC = () => {
                             onChange={handleInputChange}/>
                     </div>
 
-
+                    <button type="submit">Add Product</button>
                 </form>
                 <br/>
-                <button type="submit">Add Product</button>
+
             </>
         )}
-        <br/><br/><br/>
+
         <NavigateHome/>
     </div>);
 }
