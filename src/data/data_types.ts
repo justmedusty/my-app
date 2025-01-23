@@ -16,20 +16,20 @@ export interface Rating {
 }
 
 export interface Cart {
-    id: number;
-    user_id: number;
+    id: string;
+    userId: number;
     items: Item[];
-    data: string;
+    date: string;
     status: string;
 }
 
 export interface Item {
-    product_id: 3;
-    quantity: 2;
+    productId: number;
+    quantity: number;
 }
 
 export interface User {
-    id: number;
+    id: string;
     firstname: string;
     lastname: string;
     email: string;
@@ -37,7 +37,7 @@ export interface User {
     address: string;
     city: string;
     state: string;
-    zipcode: number;
+    zipcode: string;
     country: string;
-    phone: string // just to show formatting easier
+    phone: string
 }
