@@ -3,10 +3,16 @@ export interface Product {
     name: string;
     price: number;
     category: string;
-    numer_in_stock: number;
-    rating_information: string;
+    description: string
+    stock: number;
+    rating: Rating;
     image_url: string;
-    SKU: number;
+    sku: string;
+}
+
+export interface Rating {
+    rate : number;
+    count : number
 }
 
 export interface Cart {

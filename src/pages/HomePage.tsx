@@ -5,11 +5,11 @@ const DashboardPage: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <button onClick={() => navigate('/products')}>
+        <div className={"home"}>
+            <button className={"home_button"} onClick={() => navigate('/products')}>
                 Products
             </button>
-            <button onClick={() => navigate('/carts')}>
+            <button className={"home_button"} onClick={() => navigate('/carts')}>
                 Carts
             </button>
         </div>
